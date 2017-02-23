@@ -1,0 +1,496 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Moodle and Bootstrap
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Reboot-Lab">
+      Reboot-Lab
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01/book-a/index.html">
+          Reboot-Lab
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Reboot-Lab">
+        <h1>Lets get started</h1>
+<p>The following workshop is practical by nature, it uses a series of steps to guide you through tasks that will help you developer an understanding of how to integrate Bootstrap into your modules in Moodle.</p>
+<h2>Browsers</h2>
+<p>Moodle like Google Chrome and Firefox - Thngs might not look right if you use Internet Explorer</p>
+<p><img src="img/18.png" alt=""></p>
+<h2>Browser Tabs</h2>
+<p>We will be using multiple tabs during these steps, Moodle Tab, Tutor Tab, Search Tab etc</p>
+<p><img src="img/23.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Jumbotron</h1>
+<p>The Bootstrap Jumbotron is a welcome message, it is normally used at the top of a webpage and in your Moodle module the welcome section is a good area to use the Jumbotron component  </p>
+<p><img src="img/01.png" alt=""> </p>
+<h2>Moodle Integration</h2>
+<p>Okay, so that&#39;s what a jumbotron looks like, how do I get this into my module in Moodle?</p>
+<h2>In your Moodle module</h2>
+<p>In your moodle module or training area (commonly know as a sandbox) <em>turn editing on</em> then navigate to your welcome section and click <em>edit section</em></p>
+<p><img src="img/02.png" alt=""> </p>
+<p>When you get to the next screen you will see the option to click more more buttons and also the button to insert the HTML code, click these buttons now and you should see the following screen.</p>
+<p><img src="img/03.png" alt=""> </p>
+<h2>Copy and Paste</h2>
+<p>Copy and Paste the code below into the window and click the HTML code button, now you should see the result of the rendered code.</p>
+<pre><code class="lang-HTML">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p><img src="img/04.png" alt=""></p>
+<p>When you click the HTML code button you should see the following screen</p>
+<p><img src="img/05.png" alt=""></p>
+<p><em>Note:</em> you can change this code in this window, so for instance you can change the text that appears as the message along with the heading, it might look something below, change this now and save your work.</p>
+<p><img src="img/06.png" alt=""></p>
+<h2>What&#39;s behind the button?</h2>
+<p>Let leave this for fir now, we will return to this later.</p>
+<p>We can place some content behind the button so that it allows the student to navigate to an activity or a resource, so we could navigate to a file that we can upload or we could navigate to a discussion forum for instance.</p>
+<h2>links to files (navigation)</h2>
+<p>We can introduce links to documents from buttons, we are going to upload a file (module descriptor) and set a link to the file.</p>
+<p>Open the code again and change the </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Panels</h1>
+<p>We recommend using panels at the start of each section or with forums. As you can see from the image below we can use colors in panels titles</p>
+<p><img src="img/07.png" alt=""></p>
+<h2>Integration with Moodle</h2>
+<p>Integrating bootstrap code into Moodle is done exactly the same no matter which component that your using, its the same procedure, copy and paste the code, then in the activity or resource click on the &quot;Show more buttons&quot; button and then the HTML button</p>
+<p><img src="img/03.png" alt=""></p>
+<h2>Panel Code</h2>
+<p>Copy this code, then, with editing turned on click to edit section 1, then paste the code into the window.</p>
+<pre><code class="lang-HTML">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;
+    &lt;h3 class=&quot;panel-title&quot;&gt;Panel title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Panel content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>You should see the following</p>
+<p><img src="img/08.png" alt=""></p>
+<p>As you can see I have highlighted some text, you can either change this text here or you can hit the HTML button and change the code in the WYSIWYG screen. <em>Note:</em> where is says default thats the color, if you want to use a different color you need to change this to one of the following</p>
+<ul>
+<li>primary</li>
+<li>success</li>
+<li>info</li>
+<li>danger</li>
+<li>default</li>
+</ul>
+<p>You wont be able to do this in the WYSIWYG window, and the same apply for changing the code behind buttons, you will to do this in the code.</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Make your text or code changes and save your changes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Alerts</h1>
+<p>Alerts are a nice feature when you want to grasp the students attention</p>
+<h2>Lets get setup</h2>
+<p>Make sure you have Editing turned on and scroll to the last section</p>
+<ul>
+<li>Rename the last section to  &quot;Hidden Resources&quot;</li>
+<li>Now edit the section and click on &quot;Hide Section&quot;</li>
+<li>Click on Add and Activity or Resource and add a Forum </li>
+</ul>
+<p><img src="img/10.png" alt=""></p>
+<ul>
+<li>In the Forum Name field Call this forum &quot;Open Discussions&quot;</li>
+<li>Copy the code below into the HTML window </li>
+</ul>
+<pre><code class="lang-HTML">&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;&lt;b&gt;Please Note:&lt;/b&gt; 
+this is a public forum, please remember the 
+&lt;a href=&quot;http://www.toptenreviews.com/services/articles/25-forum-posting-etiquette-tips/&quot; 
+target=&quot;_blank&quot;&gt;rules&lt;/a&gt; or the forum
+&lt;/div&gt;</code></pre>
+<ul>
+<li>Save your work </li>
+<li>Back on the main screen edit the activity and click show</li>
+</ul>
+<p><img src="img/11.png" alt=""></p>
+<p>I have introduced some changes to the bootstrap code, normally bootstrap give you the minimum code, you must make changes, so i introduced a hyperlink to an article on the web and I made some text bold (the code below is what I started with, I changed this in the WYSIWYG)</p>
+<pre><code class="lang-HTML">&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p>If you want to use a different color you need to change &quot;danger&quot; to another attribute, use one of the following;</p>
+<ul>
+<li>warning</li>
+<li>success</li>
+<li>info</li>
+<li>danger</li>
+</ul>
+<p>Try and and take this code and place a new alert into this section</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Buttons</h1>
+<p>When we use bootstrap buttons in Moodle, we introduce some navigation, by this I mean you start direction students to resources, activities or external web pages.</p>
+<h2>Back in the Jumbrotron</h2>
+<p>Remember earlier we introduced a Jumbotron and there was a button there with the &quot;Learn More&quot; text on it, now were are going to change a couple of things</p>
+<ul>
+<li>Rename the text to &quot;Module Descriptor&quot;</li>
+<li>Insert a new <a href="http://www.computerhope.com/jargon/h/hyperlin.htm" target="_blank">Hyperlink</a></li>
+</ul>
+<h2>Upload a document</h2>
+<ul>
+<li><p>In the <a href="https://moodle.wit.ie/course/view.php?id=101672" target="_blank">Reboot your Moodle Module area</a>, there is a section called &quot;Documents&quot; in that section there is a file there called &quot;AXXXX - Cloud Systems&quot; download this document to your desktop.</p>
+</li>
+<li><p>Upload this document from your desktop to the last section, the &quot;Hidden Resources&quot; section in your training area and make this visible by clicking &quot;Edit settings&quot; then &quot;Show&quot; </p>
+</li>
+</ul>
+<p><img src="img/12.png" alt=""></p>
+<h2>The URL</h2>
+<p>The <a href="hhttp://www.computerhope.com/jargon/u/url.htm" target="_blank">URL</a> is a web address of web pages or documents over the web</p>
+<ul>
+<li>if you click on the AXXXX - Cloud Systems&quot; document it should open in a new tab</li>
+<li>copy the web address (the URL) in this new tab</li>
+</ul>
+<p><img src="img/13.png" alt=""></p>
+<h2>The code behind the button</h2>
+<ul>
+<li>Go back to the welcome section and navigate to the code behind the HTML button</li>
+<li>inside there you should see the following code</li>
+</ul>
+<pre><code class="lang-HTML">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1&gt;Students&lt;/h1&gt;
+  &lt;p&gt;Welcome to this workshop, please view the module descriptor for this module to gain a more detailed understanding of the module learning outcome and assessments&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>The part of the code we are interested in is </p>
+<pre><code class="lang-HTML">&lt;div class=&quot;jumbotron&quot;&gt;
+   . . .  
+  &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<ul>
+<li>change the &quot;#&quot; after <strong>href=&quot;#&quot;</strong> so that you end up with i.e. paste in the URL you just copied over the &quot;#&quot; after href=&quot;#&quot;</li>
+<li>change the Text in role=&quot;button&quot;&gt;Learn more to role=&quot;button&quot;&gt;Module Descriptor and save your changes</li>
+</ul>
+<pre><code class="lang-HTML">&lt;div class=&quot;jumbotron&quot;&gt;
+  . . . 
+  &lt;p&gt;
+    &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;https://moodle.wit.ie/pluginfile.php/3158958/mod_resource/content/0/AXXXX%20-%20Cloud%20Systems.pdf&quot; target=&quot;_blank&quot; role=&quot;button&quot;&gt;Module Descriptor&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>Now your Jumbotron should look like the image below</p>
+<p><img src="img/14.png" alt=""></p>
+<h2>Final Code</h2>
+<p><strong>Note:</strong> I have place an extra piece of code in here so that when you click on the button it opens the document in a new window, can you spot it?</p>
+<pre><code class="lang-HTML">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1&gt;Students&lt;/h1&gt;
+  &lt;p&gt;Welcome to this workshop, please view the module descriptor for this module to gain a more detailed understanding of the module learning outcome and assessments&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;https://moodle.wit.ie/pluginfile.php/3158958/mod_resource/content/0/AXXXX%20-%20Cloud%20Systems.pdf&quot; target=&quot;_blank&quot; role=&quot;button&quot;&gt;Module Descriptor&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Thumbnails</h1>
+<p>Visually thumbnails are great to combine navigation and content together, we can place 1, 2, or 3 thumbnails together, in our case we will use 3 thumbnails to demonstrate the concept of a Lecture, Tutorial and Practical for a topic you may teach.</p>
+<h2>Images</h2>
+<p>find 3 images <a href="https://visualhunt.com/" target="_blank">from here</a> and save them on your desktop</p>
+<h2>Bootstrap Thumbnails</h2>
+<p><img src="img/15.png" alt=""></p>
+<h2>The Code</h2>
+<ul>
+<li>Copy the code below and then got to an empty section (section 2) and click on add and activity or resource and add a label (its a resource scroll to the end)</li>
+</ul>
+<p><img src="img/19.png" alt=""></p>
+<ul>
+<li>Click on the HTML button on the label window and paste in the code</li>
+</ul>
+<pre><code class="lang-HTML">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6 col-md-4&quot;&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+        &lt;p&gt;...&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>Tags</h2>
+<p>This is the break down of what a tag is and its contents, this is not too important, but what is important is that you are aware that tags have an opening and closing tag.</p>
+<ul>
+<li>The HTML Element looks like this</li>
+</ul>
+<p><img src="img/17.png" alt=""></p>
+<h2>Back to Moodle</h2>
+<p>If you paste this code in 3 times for 3 thumbnails then you will end up with 3 vertical thumbnails, we don&#39;t want that, we want them horizontal, so you must paste in the code the first time then copy the inner code (see below) and paste that inside <strong>outer DIV</strong></p>
+<p><img src="img/16.png" alt=""></p>
+<blockquote>
+<p>So the code you need to place inside the outer DIV tags is</p>
+</blockquote>
+<pre><code class="lang-HTML">  &lt;div class=&quot;col-sm-6 col-md-4&quot;&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+        &lt;p&gt;...&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<h2>Headings, Text and Images</h2>
+<ul>
+<li>If you click on the HTML button again you should see the result in the WYSIWYG window</li>
+<li>Change the headings from <strong>Thumbnail Heading</strong> to Lecture, Tutorial and Practical
+and change the text under each heading as well to reflect the item (a summary)</li>
+<li>click on the image and upload the images into the 3 image placeholders</li>
+</ul>
+<p><img src="img/20.png" alt=""></p>
+<p>Don t forget you can also adjust the size of the image, you might have to play around with this. you can also introduce some navigation with the buttons, i.e. point to lecture notes, labs files, URL&#39;s etc.</p>
+<p><img src="img/21.png" alt=""></p>
+<h2>Result</h2>
+<p><img src="img/22.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Ipsum</h1>
+<h2>Donec pede</h2>
+<p>Aenean commodo ligula eget dolor.:</p>
+<pre><code>git checkout -b lorem</code></pre>
+<h2>Donec pede</h2>
+<p>Pretium quis, sem.:</p>
+<pre><code>$ git branch --set-upstream-to=origin/lorem ipsum-client</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Conor O'Neill (cponeill@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
